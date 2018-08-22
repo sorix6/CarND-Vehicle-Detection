@@ -4,6 +4,7 @@ from sklearn import tree
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import VotingClassifier
 from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
 
 def classifier1():
 # Results
@@ -80,5 +81,28 @@ def classifier4()
 	pred = eclf1.predict(X_test)
 	acc = accuracy_score(y_test, pred)
 	print('Test Accuracy of SVC = ', round(accuracy_score(y_test, pred), 4))
+	# Check the prediction time for a single sample
+	t=time.time()
+	
+def classifier5():
+# Results
+# 46.21 Seconds to train SVC...
+# Test Accuracy of SVC =  0.9851
+	clf1 = LogisticRegression(random_state=1)
+
+	clf = tree.DecisionTreeClassifier(criterion="entropy", max_depth=1)
+	svc = LinearSVC(C=0.1)
+	svc.probability = True
+
+	eclf1 = VotingClassifier(estimators=[('svc', svc), ('clf1', clf1)], voting='hard')
+
+	# Check the training time for the SVC
+	t=time.time()
+	eclf1.fit(X_train, y_train)
+	t2 = time.time()
+	print(round(t2-t, 2), 'Seconds to train SVC...')
+	# Check the score of the SVC
+	acc=eclf1.score(X_test, y_test)
+	print('Test Accuracy of SVC = ', round(acc, 4))
 	# Check the prediction time for a single sample
 	t=time.time()
