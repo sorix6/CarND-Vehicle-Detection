@@ -59,6 +59,19 @@ I tried various combinations of parameters and...
 
 I trained a linear SVM using...
 
+!!!!! The best C value has been chosen by using a GridSearchCV. The best value has been chosen to be C=0.0001
+LinearSVC(C=0.0001, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0) with an accuracy of 0.9918
+	 
+Different tries have been made in order to further improve accuracy:
+
+VotingClassifier combining a Decision Tree with the LinearSVC: accuracy 0.9851
+
+Using SVC with a kernel="linear" option was a lot slower 
+
+
 ### Sliding Window Search
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?

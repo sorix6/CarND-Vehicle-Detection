@@ -1,0 +1,4 @@
+examples/
+training_images
+_pycache
+.ipynb_checkpoints
