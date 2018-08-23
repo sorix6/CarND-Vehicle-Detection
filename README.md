@@ -257,7 +257,7 @@ The final video processing can be found in the file project_video_YCrCb.mp4, in 
 
 ### Discussion
 
-The pipeline seems to have small glitches, in very dark regions of the road. Although tests have been run toimprove the accuracy of the classifier, no solution for improving it further has been found until now.
+The pipeline seems to have small glitches, in very dark regions of the road. Although tests have been run to improve the accuracy of the classifier, no solution for improving it further has been found until now.
 
 Most of the time, the vehicles are correctly detected, although, the bounding box is not always completely stable.
 A way to solve this problem could be to save differences in the position of the car with respect to the previous frames and try to create a sort of continuous transition.
