@@ -49,7 +49,7 @@ The features are treated in the **tunner1()** and **tunner2()** methods of the f
 The vehicle and non-vehicle features are stacked together and standardized.
 A **Linear Support Vector Classifier** has been selected for the training.
 
-1. A first bacth of tests has been made, using the following parameters:
+1. A first batch of tests has been made, using the following parameters:
 ```
   -Color spaces: ['RGB', 'HSV', 'LUV', 'HLS', 'YUV', 'YCrCb']
   -HOG orientations: [9, 11, 13] 
