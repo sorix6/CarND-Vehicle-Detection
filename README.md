@@ -50,21 +50,15 @@ The vehicle and non-vehicle features are stacked together and standardized.
 A **Linear Support Vector Classifier** has been selected for the training.
 
 1. A first bacth of tests has been made, using the following parameters:
-
+```
   -Color spaces: ['RGB', 'HSV', 'LUV', 'HLS', 'YUV', 'YCrCb']
-  
   -HOG orientations: [9, 11, 13] 
-  
   -HOG pixels per cell: [8, 16] 
-  
   -HOG cells per block: 2 
-  
   -HOG channels: [0, 1, 2, "ALL"]
-  
-  -Spatial binning dimensions: [(16, 16), (32, 32)]
-  
+  -Spatial binning dimensions: [(16, 16), (32, 32)]  
   -Number of histogram bins: [16, 32] 
-
+```
 
 The first 30 lines of the results have been attached below
 
@@ -72,22 +66,17 @@ The first 30 lines of the results have been attached below
 
 
 2. Using the results of the first batch of tests, the following pairs of color-space and hog channels have been selected for further testing:
-
+```
   -Color space and HOG channel: [('HSV', 'ALL'), ('YUV', 1), ('YUV', 'ALL'), ('YCrCb', 'ALL'), ('LUV', 'ALL'), ('HSV', 2)]  
   
   The other selected parameters are:
-  
   -HOG orientations: [9, 11] 
-  
   -HOG pixels per cell: [8, 16] 
-  
   -HOG cells per block: 2 
-  
   -HOG channels: [0, 1, 2, "ALL"]
-  
   -Spatial binning dimensions: [(16, 16), (32, 32)]
-  
   -Number of histogram bins: [16, 32] 
+```
 
 The results of the second set of tests has been attached below:
   
@@ -95,21 +84,16 @@ The results of the second set of tests has been attached below:
   
 3. The final set of HOG parameters have been selected with respect to the accuracy but also with respect to the training time:
 
+```
   -Color spaces: 'YCrCb'
-  
   -HOG orientations: 11
-  
   -HOG pixels per cell: 16
-  
   -HOG cells per block: 2 
-  
   -HOG channels: "ALL"
-  
   -Spatial binning dimensions: (32, 32)
-  
   -Number of histogram bins: 16
   
-
+```
 
 The parameter C of the LinearSVC() has also been tunned, using a sing a GridSearchCV(). Test have been made using the following possible values: [0.0001, 0.1, 10, 100]. 
 The best value has been returned as being 0.0001. 
