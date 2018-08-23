@@ -204,13 +204,12 @@ The sliding window search has been implemented by dividing the area of interest 
 
 The method **search_windows()** in the file **tools.py** iterates over all the windows in the picture, extracts the test window and the features from the image being processed and returns a set of windows that have been evaluated as containing a car.
 
-Windows | Hot Windows
------------- | ------------- 
-![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/windows.jpg) | ![Hot window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/hot_windows.jpg)
+In order to remove the false positives, a heat map has been added. One of the heatmaps images was completely black due to lack of vehicles, so it has been ignored.
 
-In order to remove the false positives, a heat map has been added. The results of the heat map as well as the vehicle detection in the test image after applying the heat map are displayed below (one of the heatmaps images was completely black due to lack of vehicles, so it has been ignored):
+Windows | Heat map | Hot Windows
+------------ | ------------- | ------------- 
+![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/windows.jpg) | ![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/heatmaps.jpg) | ![Hot window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/hot_windows.jpg)
  
-![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/heatmaps.jpg) 
 
 ---
 
