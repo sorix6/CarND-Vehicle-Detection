@@ -209,10 +209,8 @@ Windows | Hot Windows
 ![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/windows.jpg) | ![Hot window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/hot_windows.jpg)
 
 In order to remove the false positives, a heat map has been added. The results of the heat map as well as the vehicle detection in the test image after applying the heat map are displayed below (one of the heatmaps images was completely black due to lack of vehicles, so it has been ignored):
-
-Heatmap | Sliding windows
------------- | ------------- 
-![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/heatmaps.jpg) | ![Hot window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/sliding_windows.jpg)
+ 
+![Window display on test images](https://raw.githubusercontent.com/sorix6/CarND-Vehicle-Detection/master/output_images/heatmaps.jpg) 
 
 ---
 
