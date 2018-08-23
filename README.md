@@ -27,6 +27,7 @@ A random image from each set has been displayed:
 
 In order to have a better sense of the HOG features in each set of pictures, random images from each set have been displayed, with their respective HOG features.
 The example HOG features have been extracted by using the following sets of parameters:
+
 Column | Orientation | Pixels per cell 
 ------------ | ------------- | ------------- 
 2 | 9 | 8
